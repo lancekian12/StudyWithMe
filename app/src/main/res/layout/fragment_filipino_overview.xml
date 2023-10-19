@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="391dp"
+    android:layout_height="325dp"
+    android:fillViewport="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        tools:context=".FilipinoOverviewFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivTime"
+                android:layout_width="33dp"
+                android:layout_height="34dp"
+                android:src="@drawable/baseline_access_time_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.083"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivCertificate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/certificate"
+                app:layout_constraintEnd_toEndOf="@+id/ivTime"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/ivTime"
+                app:layout_constraintTop_toBottomOf="@+id/ivTime" />
+
+            <ImageView
+                android:id="@+id/ivLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/level"
+                app:layout_constraintEnd_toEndOf="@+id/ivCertificate"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/ivCertificate"
+                app:layout_constraintTop_toBottomOf="@+id/ivCertificate" />
+
+            <TextView
+                android:id="@+id/tvTimeFinished"
+                style="@style/SubjectContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="3 hours"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.243"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCompletion"
+                style="@style/SubjectContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Completion Certificate"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvTimeFinished"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvTimeFinished"
+                app:layout_constraintTop_toBottomOf="@+id/tvTimeFinished" />
+
+            <TextView
+                android:id="@+id/tvLevel"
+                style="@style/SubjectContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Beginner"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvCompletion"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvCompletion"
+                app:layout_constraintTop_toBottomOf="@+id/tvCompletion" />
+
+            <TextView
+                android:id="@+id/tvWhatLearn"
+                style="@style/SubjectContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="What will I learn?"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/ivLevel"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/ivLevel"
+                app:layout_constraintTop_toBottomOf="@+id/ivLevel" />
+
+            <TextView
+                android:id="@+id/tvLearned"
+                style="@style/SubjectContent"
+                android:layout_width="340dp"
+                android:layout_height="97dp"
+                android:layout_marginTop="12dp"
+                android:text="This subject offer 5 topics where it can enhance your Filipino skills. You can expect to learn various aspects of Filipino Language, Culture, and Literature"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvWhatLearn"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvWhatLearn"
+                app:layout_constraintTop_toBottomOf="@+id/tvWhatLearn" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/SubjectContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Rating and Reviews"
+                app:layout_constraintEnd_toEndOf="@+id/tvLearned"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvLearned"
+                app:layout_constraintTop_toBottomOf="@+id/tvLearned" />
+
+            <Button
+                android:id="@+id/btnStartLesson"
+                android:layout_width="256dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/continue_button_background"
+                android:text="Start Lesson"
+                app:layout_constraintEnd_toEndOf="@+id/tvLearned"
+                app:layout_constraintHorizontal_bias="0.19"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</ScrollView>

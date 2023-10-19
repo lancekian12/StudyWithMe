@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_marginBottom="10dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MathTopic">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTop"
+            android:layout_width="413dp"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/cvBackground"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="15dp"
+            app:cardMaxElevation="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.017"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.428"
+                    app:srcCompat="@drawable/mathlogo" />
+
+                <TextView
+                    android:id="@+id/tvTopic"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="68dp"
+                    android:text="Math: Functions"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.542" />
+
+                <ImageView
+                    android:id="@+id/ivClear"
+                    android:layout_width="36dp"
+                    android:layout_height="33dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.957"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.521"
+                    app:srcCompat="@drawable/ic_clear" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/pbProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="3dp"
+            android:max="3"
+            android:progress="1"
+            android:progressDrawable="@drawable/custom_progress_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvTop" />
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/Title"
+            android:layout_width="381dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="FUNCTIONS"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/pbProgress"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/pbProgress"
+            app:layout_constraintTop_toBottomOf="@+id/pbProgress" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDescription"
+            android:layout_width="366dp"
+            android:layout_height="118dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/cvBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="15dp"
+            app:cardMaxElevation="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvTheTitle"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cell"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.008" />
+
+                <TextView
+                    android:id="@+id/tvDescriptionOne"
+                    style="@style/FontText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="116dp"
+                    android:justificationMode="inter_word"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="22dp"
+                    android:paddingEnd="10dp"
+                    android:text="Cells are the basic building blocks of all living organisms"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.538"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDescription2"
+            android:layout_width="188dp"
+            android:layout_height="194dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/cvBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="15dp"
+            app:cardMaxElevation="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/cvDescription"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cvDescription"
+            app:layout_constraintTop_toBottomOf="@+id/cvDescription">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Example"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.156" />
+
+                <TextView
+                    android:id="@+id/tvExampleOne"
+                    style="@style/FontText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="146dp"
+                    android:justificationMode="inter_word"
+                    android:paddingLeft="7dp"
+                    android:text="They come in various shapes and sizes, but they share common structural components."
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.555"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ivPictureOne"
+            android:layout_width="171dp"
+            android:layout_height="197dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/cvDescription"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/cvDescription"
+            app:layout_constraintTop_toBottomOf="@+id/cvDescription"
+            app:srcCompat="@drawable/sciencevector" />
+
+        <ImageView
+            android:id="@+id/ivPictureTwo"
+            android:layout_width="177dp"
+            android:layout_height="224dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/cvDescription2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cvDescription2"
+            app:layout_constraintTop_toBottomOf="@+id/cvDescription2"
+            app:srcCompat="@drawable/alberteintein" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDescription3"
+            android:layout_width="178dp"
+            android:layout_height="188dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/cvBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="15dp"
+            app:cardMaxElevation="15dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivPictureOne"
+            app:layout_constraintHorizontal_bias="0.75"
+            app:layout_constraintStart_toEndOf="@+id/ivPictureTwo"
+            app:layout_constraintTop_toBottomOf="@+id/ivPictureOne">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Example"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.505"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.095" />
+
+                <TextView
+                    android:id="@+id/tvExampleTwo"
+                    style="@style/FontText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="145dp"
+                    android:justificationMode="inter_word"
+                    android:paddingLeft="7dp"
+                    android:text="@string/cell_membrane_cytoplasmm_nucleus_mitochondria"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.533"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.86" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/btnContinue"
+            style="@style/ButtonColor"
+            android:layout_width="359dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/animation_button_background"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="@+id/cvDescription3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cvDescription2"
+            app:layout_constraintTop_toBottomOf="@+id/ivPictureTwo">
+
+            <!-- Button -->
+            <TextView
+                android:id="@+id/button_text"
+                style="@style/ButtonColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/animation_button_background"
+                android:elevation="0dp"
+                android:text="@string/app_continue"
+                app:cornerRadius="5dp" />
+
+            <!-- LottieAnimationView -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/button_animation"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/button_loading_white"
+                tools:ignore="MissingConstraints" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
