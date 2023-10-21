@@ -32,9 +32,9 @@ class MathTopic : AppCompatActivity() {
     private lateinit var theTitle : TextView
     private lateinit var backButton : ImageView
     private var startingPosition1 = 3
-    private var startingPosition2 = 10
-    private var startingPosition3 = 15
-    private var startingPosition4 = 20
+    private var startingPosition2 = 6
+    private var startingPosition3 = 10
+    private var startingPosition4 = 13
     private var total = 0
 
     @SuppressLint("MissingInflatedId", "WrongViewCast", "SetTextI18n")
@@ -61,10 +61,10 @@ class MathTopic : AppCompatActivity() {
         button_text = findViewById(R.id.button_text)
         backButton = findViewById(R.id.ivClear)
 
-        val endingPosition1 = 7
-        val endingPosition2 = 14
-        val endingPosition3 = 19
-        val endingPosition4 = 24
+        val endingPosition1 = 5
+        val endingPosition2 = 8
+        val endingPosition3 = 11
+        val endingPosition4 = 15
 
         topic = findViewById(R.id.tvTopic)
         theTitle = findViewById(R.id.tvTitle)
@@ -79,20 +79,20 @@ class MathTopic : AppCompatActivity() {
         if (total == 0) {
             displayTitleDescription(currentPosition)
         } else if (getTotal >= 15) {
-            topic.text = "Science: States of Matter"
-            theTitle.text = "STATES OF MATTER"
+            topic.text = "Math: Energy"
+            theTitle.text = "ENERGY"
             displayTitleDescription(startingPosition4)
         } else if (getTotal >= 11) {
-            topic.text = "Science: Famous Scientist"
-            theTitle.text = "FAMOUS SCIENTIST"
+            topic.text = "Math: Area"
+            theTitle.text = "AREA"
             displayTitleDescription(startingPosition3)
         } else if (getTotal >= 7) {
-            topic.text = "Science: Animals"
-            theTitle.text = "TYPES OF ANIMALS"
+            topic.text = "Math: Mean, Median, Mode"
+            theTitle.text = "MEAN, MEDIAN, MODE"
             displayTitleDescription(startingPosition2)
         } else if (getTotal >= 3) {
-            topic.text = "Science: Solar System"
-            theTitle.text = "TYPES OF SOLAR SYSTEM"
+            topic.text = "Math: Temperature"
+            theTitle.text = "TEMPERATURE"
             displayTitleDescription(startingPosition1)
         }
 
@@ -124,8 +124,8 @@ class MathTopic : AppCompatActivity() {
                     }
                 } else if(getTotal >= 15){
                     if (startingPosition4 < endingPosition4) {
-                        topic.text = "Science: States of Matter"
-                        theTitle.text = "STATES OF MATTER"
+                        topic.text = "Math: Energy"
+                        theTitle.text = "ENERGY"
                         startingPosition4++
                         displayTitleDescription(startingPosition4)
                     } else {
@@ -135,8 +135,8 @@ class MathTopic : AppCompatActivity() {
                     }
                 } else if(getTotal >= 11){
                     if (startingPosition3 < endingPosition3) {
-                        topic.text = "Science: Famous Scientist"
-                        theTitle.text = "FAMOUS SCIENTIST"
+                        topic.text = "Math: Area"
+                        theTitle.text = "AREA"
                         startingPosition3++
                         displayTitleDescription(startingPosition3)
                     } else {
@@ -146,8 +146,8 @@ class MathTopic : AppCompatActivity() {
                     }
                 } else if (getTotal >= 7) {
                     if (startingPosition2 < endingPosition2) {
-                        topic.text = "Science: Animals"
-                        theTitle.text = "TYPES OF ANIMALS"
+                        topic.text = "Math: Mean, Median, Mode"
+                        theTitle.text = "MEAN, MEDIAN, MODE"
                         startingPosition2++
                         displayTitleDescription(startingPosition2)
                     } else {
@@ -157,8 +157,8 @@ class MathTopic : AppCompatActivity() {
                     }
                 } else if (getTotal >= 3) {
                     if (startingPosition1 < endingPosition1) {
-                        topic.text = "Science: Solar System"
-                        theTitle.text = "TYPES OF SOLAR SYSTEM"
+                        topic.text = "Math: Temperature"
+                        theTitle.text = "TEMPERATURE"
                         startingPosition1++
                         displayTitleDescription(startingPosition1)
                     } else {

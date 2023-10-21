@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Lance Kian Color -->
-    <color name="black">#646060</color>
+    <color name="black2">#646060</color>
     <color name="pureBlack">#000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="backroundProgressBar">#DCD6D6</color>
@@ -23,4 +23,12 @@
     <color name="noteFragment">#FEC25A</color>
     <color name="ffc367">#ffc367</color>
     <color name="transparent_black">#80000000</color>
+    <!-- John Paul Color -->
+    <color name="black">#FF000000</color>
+    <color name="primary_color">#FFF2E2</color>
+    <color name="grey_light">#F0F0F0</color>
+    <color name="darker_grey">#61605D</color>
+    <color name="enabled_button_color">#fec775</color>
+    <color name="grey">#000</color>
+    <color name="primarycolor">#fec775</color>
 </resources>

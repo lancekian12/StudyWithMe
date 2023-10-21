@@ -27,7 +27,7 @@
 
     <RelativeLayout
         android:id="@+id/btnCheckTwo"
-        style="@style/ButtonColor"
+        style="@style/Button_Color_2"
         android:layout_width="363dp"
         android:layout_height="53dp"
         android:background="@drawable/animation_button_background"
@@ -41,7 +41,7 @@
 
         <TextView
             android:id="@+id/button_text"
-            style="@style/ButtonColor"
+            style="@style/Button_Color_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"

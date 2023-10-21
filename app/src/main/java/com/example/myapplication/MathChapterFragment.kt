@@ -32,11 +32,11 @@ class MathChapterFragment : Fragment() {
 
 class ChapterAdapterMath : RecyclerView.Adapter<ChapterAdapterMath.ChapterViewHolder>() {
     private val chapters = listOf(
-        Chapter("Lesson 1", "Literature", listOf("Uri ng Pangungusap", "Video Lesson: Uri ng Pangungusap", "Test Quiz 1")),
-        Chapter("Lesson 2", "Kian", listOf("Uri ng Tayutay", "Video Lesson: Uri ng Tayutay", "Test Quiz 2")),
-        Chapter("Lesson 3", "Mga Uri ng Panitikan", listOf("Uri ng Panitikan", "Video Lesson: Uri ng Panitikan", "Test Quiz 3")),
-        Chapter("Lesson 4", "Mga Uri ng Karunungang Bayan", listOf("Uri ng Karunungang Bayan", "Video Lesson: Uri ng Karunungang Bayan", "Test Quiz 4")),
-        Chapter("Lesson 5", "Mga Uri ng Aspetong Pandiwa", listOf("Uri ng Aspetong Pandiwa", "Video Lesson: Uri ng Aspetong Pandiwa", "Test Quiz 5")),
+        Chapter("Lesson 1", "Function", listOf("Function", "Video Lesson: Function", "Test Quiz 1")),
+        Chapter("Lesson 2", "Temperature", listOf("Temperature", "Video Lesson: Temperature", "Test Quiz 2")),
+        Chapter("Lesson 3", "Mean, Median, Mode", listOf("Mean, Median, Mode", "Video Lesson: Mean, Median, Mode", "Test Quiz 3")),
+        Chapter("Lesson 4", "Area", listOf("Area", "Video Lesson: Area", "Test Quiz 4")),
+        Chapter("Lesson 5", "Energy", listOf("Energy", "Video Lesson: Energy", "Test Quiz 5")),
         Chapter("Certificate Completion", "Final Quiz", listOf())
     )
 

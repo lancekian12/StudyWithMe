@@ -43,7 +43,7 @@ class HistoryContent : AppCompatActivity() {
 
         val back = findViewById<ImageView>(R.id.ivBack)
         back.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this,Navigation::class.java)
             startActivity(intent)
         }
     }

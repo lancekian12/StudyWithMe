@@ -129,19 +129,19 @@ class MathTopicQuiz : AppCompatActivity() {
         if(total ==0 ) {
             loadQuestion(currentQuestionIndex) // Load the first question
         }else if(total >= 15){
-            topic.text = "Science: States of Matter"
+            topic.text = "Math: Energy"
             loadQuestion(startingPosition4)
         }
         else if(total >= 11){
-            topic.text = "Science: Famous Scientist"
+            topic.text = "Math: Area"
             loadQuestion(startingPosition3)
         }
         else if(total >= 7){
-            topic.text = "Science: Animals"
+            topic.text = "Math: Mean, Median, Mode"
             loadQuestion(startingPosition2)
         }
         else if(total >= 3){
-            topic.text = "Science: Solar System"
+            topic.text = "Math: Temperature"
             loadQuestion(startingPosition1)
         }
 
@@ -245,7 +245,7 @@ class MathTopicQuiz : AppCompatActivity() {
                         button_text.visibility = View.VISIBLE
                     } else if(total >= 15){
                         if (startingPosition4 < endingPosition4) {
-                            topic.text = "Science: States of Matter"
+                            topic.text = "Math: Energy"
                             startingPosition4++
                             loadQuestion(startingPosition4)
                         } else {
@@ -276,7 +276,7 @@ class MathTopicQuiz : AppCompatActivity() {
                         button_text.visibility = View.VISIBLE
                     } else if(total >= 11){
                         if (startingPosition3 < endingPosition3) {
-                            topic.text = "Science: Famous Scientist"
+                            topic.text = "Math: Area"
                             startingPosition3++
                             loadQuestion(startingPosition3)
                         } else {
@@ -307,7 +307,7 @@ class MathTopicQuiz : AppCompatActivity() {
                         button_text.visibility = View.VISIBLE
                     }  else if(total >= 7){
                         if (startingPosition2 < endingPosition2) {
-                            topic.text = "Science: Animals"
+                            topic.text = "Math: Mean, Median, Mode"
                             startingPosition2++
                             loadQuestion(startingPosition2)
                         } else {
@@ -338,7 +338,7 @@ class MathTopicQuiz : AppCompatActivity() {
                         button_text.visibility = View.VISIBLE
                     } else if(total >=3){
                         if (startingPosition1 < endingPosition1) {
-                            topic.text = "Science: Solar System"
+                            topic.text = "Math: Temperature"
                             startingPosition1++
                             loadQuestion(startingPosition1)
                         } else {

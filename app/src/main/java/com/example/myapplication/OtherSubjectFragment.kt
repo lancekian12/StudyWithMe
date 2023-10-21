@@ -24,11 +24,11 @@ class OtherSubjectFragment : Fragment() {
 
         // Create a list of subject items
         val subjectItems = listOf(
-            SubjectItem(1, "Science Subject", R.drawable.sciencesubject),
-            SubjectItem(2, "Filipino Subject", R.drawable.filipinosubject),
-            SubjectItem(3, "Math Subject", R.drawable.mathsubject),
-            SubjectItem(4, "English Subject", R.drawable.englishsubject),
-            SubjectItem(5, "History Subject", R.drawable.history)
+            SubjectItem(R.drawable.sciencelogo, "Science Subject", R.drawable.sciencesubject),
+            SubjectItem(R.drawable.filipinologo, "Filipino Subject", R.drawable.filipinosubject),
+            SubjectItem(R.drawable.mathlogo, "Math Subject", R.drawable.mathsubject),
+            SubjectItem(R.drawable.englishlogo, "English Subject", R.drawable.englishsubject),
+            SubjectItem(R.drawable.historylogo, "History Subject", R.drawable.history)
             // Add more SubjectItem objects as needed
         )
 
@@ -56,31 +56,31 @@ class SubjectAdapter(private val context: Context, private val subjectItems: Lis
         return SubjectViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: SubjectViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SubjectAdapter.SubjectViewHolder, position: Int) {
         val subjectItem = subjectItems[position]
         holder.bind(subjectItem)
 
         // Set a click listener for the item
         holder.itemView.setOnClickListener {
-            // Handle item click here
-            when (subjectItem.id) {
-                1 -> {
+            // Handle item click here based on position
+            when (position) {
+                0 -> {
                     val intent = Intent(context, ScienceContent::class.java)
                     context.startActivity(intent)
                 }
-                2 -> {
+                1 -> {
                     val intent = Intent(context, FilipinoContent::class.java)
                     context.startActivity(intent)
                 }
-                3 -> {
+                2 -> {
                     val intent = Intent(context, MathContent::class.java)
                     context.startActivity(intent)
                 }
-                4 -> {
+                3 -> {
                     val intent = Intent(context, EnglishContent::class.java)
                     context.startActivity(intent)
                 }
-                5 -> {
+                4 -> {
                     val intent = Intent(context, HistoryContent::class.java)
                     context.startActivity(intent)
                 }
@@ -94,10 +94,12 @@ class SubjectAdapter(private val context: Context, private val subjectItems: Lis
     }
 
     inner class SubjectViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        private val logos : ImageView = itemView.findViewById(R.id.ivLogos)
         private val lessonNumberTextView: TextView = itemView.findViewById(R.id.tvSubject)
         private val subjectPictureImageView: ImageView = itemView.findViewById(R.id.ivSubject)
 
         fun bind(subjectItem: SubjectItem) {
+            logos.setImageResource(subjectItem.id)
             lessonNumberTextView.text = subjectItem.lessonNumber
             subjectPictureImageView.setImageResource(subjectItem.subjectPictureResourceId)
         }

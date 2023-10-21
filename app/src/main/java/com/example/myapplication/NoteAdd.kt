@@ -37,7 +37,7 @@ class NoteAdd : AppCompatActivity() {
 
         binding.btnNoteReturn.setOnClickListener{
             Log.i("test", "Add note disabled!")
-            val intent = Intent(this, NoteList::class.java)
+            val intent = Intent(this, Navigation::class.java)
             startActivity(intent)
         }
 

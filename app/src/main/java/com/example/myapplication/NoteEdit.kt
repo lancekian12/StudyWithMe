@@ -43,7 +43,7 @@ class NoteEdit : AppCompatActivity() {
 
         binding.btnNoteUpReturn.setOnClickListener{
             Log.i("test", "Edit mode disabled!")
-            val intent = Intent(this, NoteList::class.java)
+            val intent = Intent(this, Navigation::class.java)
             startActivity(intent)
         }
 

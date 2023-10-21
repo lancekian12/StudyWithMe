@@ -104,7 +104,7 @@
         app:layout_constraintHorizontal_bias="0.607"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" >
+        app:layout_constraintVertical_bias="0.75">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -116,7 +116,7 @@
                 android:layout_height="match_parent"
                 android:justificationMode="inter_word"
                 android:padding="15dp"
-                android:text="Ang panitikan ay may malalim na kahalagahan sa lipunan. Ito'y nagpapahayag ng kultura, kasaysayan, at karanasan ng isang bansa. Nagbibigay ito ng pagkakakilanlan, pagpapahalaga sa wika, at pag-unawa sa iba't ibang perspektiba. Ipinapakita ng panitikan ang damdamin, ideya, at pagkakakilanlan ng tao, nagbubukas daan sa pag-unlad ng kamalayan at kritikal na pag-iisip."
+                android:text="Uri ng Pangungusap: Pautos (Interrogative) - Ginagamit upang magtanong o magpahayag ng katanungan o di-pagkakaintindihan sa isang pook o tao."
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

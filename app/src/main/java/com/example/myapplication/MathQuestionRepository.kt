@@ -4,231 +4,231 @@ object MathQuestionRepository {
     fun getQuestion(): ArrayList<DataClassQuestionAnswer> {
         val questionList = ArrayList<DataClassQuestionAnswer>()
         val ques1 = DataClassQuestionAnswer(
-            "Which of the following statements is TRUE? Choose the following",
-            "A Cells are the basic building blocks of all living organisms.",
-            "B. Cells are completely hollow and empty spaces.",
-            "C. Cells are all the same size and shape.",
-            "D. Cells can survive indefinitely without any source of energy",
+            "Find the f(x) = 2x + 3 where x is 2? Choose the following correct answer",
+            "A. 7",
+            "B. 8",
+            "C. 10",
+            "D. 11",
             1
         )
         questionList.add(ques1)
         val ques2 = DataClassQuestionAnswer(
-            "What is CELL-MEMBRANE? Choose the following",
-            "A. The outer boundary of the cell, controlling what enters and exits the cell.",
-            "B. The gel-like substance that fills the cell and houses various organelles.",
-            "C. He control center of the cell, containing genetic material (DNA) that directs cell activities.",
-            "D. Organelles responsible for producing energy (ATP) through cellular respiration.",
-            1
+            "Find the f(x) = 2x + 3 where x is 4? Choose the following correct answer",
+            "A. 7",
+            "B. 8",
+            "C. 10",
+            "D. 11",
+            4
         )
         questionList.add(ques2)
         val ques3 = DataClassQuestionAnswer(
-            "What is CYTOPLASM? Choose the following",
-            "A. The outer boundary of the cell, controlling what enters and exits the cell.",
-            "B. The gel-like substance that fills the cell and houses various organelles.",
-            "C. He control center of the cell, containing genetic material (DNA) that directs cell activities.",
-            "D. Organelles responsible for producing energy (ATP) through cellular respiration.",
+            "Find the f(x) = 6x2 - 4x + 4 where x is 5? Choose the following correct answer",
+            "A. 190.",
+            "B. 134",
+            "C. 150",
+            "D. 412",
             2
         )
         questionList.add(ques3)
         val ques4 = DataClassQuestionAnswer(
-            "What is NUCLEUS? Choose the following",
-            "A. The outer boundary of the cell, controlling what enters and exits the cell.",
-            "B. The gel-like substance that fills the cell and houses various organelles.",
-            "C. He control center of the cell, containing genetic material (DNA) that directs cell activities.",
-            "D. Organelles responsible for producing energy (ATP) through cellular respiration.",
+            "Find the f(x) = 6x + 1 + x where x is 5? Choose the following correct answer",
+            "A. 19",
+            "B. 12",
+            "C. 36",
+            "D. 100",
             3
         )
         questionList.add(ques4)
         val ques5 = DataClassQuestionAnswer(
-            "What is MITOCHONDRIA? Choose the following",
-            "A. The outer boundary of the cell, controlling what enters and exits the cell.",
-            "B. The gel-like substance that fills the cell and houses various organelles.",
-            "C. He control center of the cell, containing genetic material (DNA) that directs cell activities.",
-            "D. Organelles responsible for producing energy (ATP) through cellular respiration.",
+            "Find the f(x) = -4**x + 5 where x is 5? Choose the following correct answer",
+            "A. -2014",
+            "B. 2014",
+            "C. 1019",
+            "D. -1019",
             4
         )
         questionList.add(ques5)
         //2
         val ques6 = DataClassQuestionAnswer(
-            "Which of the following statements is TRUE? Choose the following",
-            "A. The solar system consists of only eight planets.",
-            "B. The solar system is a fascinating topic in science, offering a wide range of information for learners of all ages.",
-            "C. The planets in the solar system all have the same gravitational force. ",
-            "D. The solar system consists of only eight planets.",
+            "Find the K=°C+273 where °C is 25? Choose the following correct answer",
+            "A. 350",
+            "B. 298",
+            "C. 120",
+            "D. 3097",
             2
         )
         questionList.add(ques6)
         val ques7 = DataClassQuestionAnswer(
-            "What is STAR? Choose the following",
-            "A.  It's a rocky or metallic objects that orbit the Sun, primarily found in the asteroid belt.",
-            "B. It's a vast system of stars, stellar remnants, interstellar gas, dust, and dark matter bound together by gravity.",
-            "C. It's a celestial objects that orbit stars, including our Sun, and they lack the ability to generate their own light.",
-            "D. It's a luminous celestial object consisting primarily of hydrogen and helium gas that emits light.",
+            "Find the °F=(°C×9/5)+32 where °C is 100? Choose the following correct answer",
+            "A.  212",
+            "B. 321",
+            "C. 415",
+            "D. 212",
             4
         )
         questionList.add(ques7)
         val ques8 = DataClassQuestionAnswer(
-            "What is PLANETS? Choose the following",
-            "A.  It's a rocky or metallic objects that orbit the Sun, primarily found in the asteroid belt.",
-            "B. It's a vast system of stars, stellar remnants, interstellar gas, dust, and dark matter bound together by gravity.",
-            "C. It's a celestial objects that orbit stars, including our Sun, and they lack the ability to generate their own light.",
-            "D. It's a luminous celestial object consisting primarily of hydrogen and helium gas that emits light.",
+            "Find the °C=K−273.15 where K is 500? Choose the following correct answer",
+            "A.  124.85",
+            "B. 122.85",
+            "C. 226.85",
+            "D. 40.85",
             3
         )
         questionList.add(ques8)
         val ques9 = DataClassQuestionAnswer(
-            "What is GALAXY? Choose the following",
-            "A.  It's a rocky or metallic objects that orbit the Sun, primarily found in the asteroid belt.",
-            "B. It's a vast system of stars, stellar remnants, interstellar gas, dust, and dark matter bound together by gravity.",
-            "C. It's a celestial objects that orbit stars, including our Sun, and they lack the ability to generate their own light.",
-            "D. It's a luminous celestial object consisting primarily of hydrogen and helium gas that emits light.",
+            "Find the °F=(K−273.15)× 9/5 + 32 where K is -250? Choose the following correct answer",
+            "A.  -412.44",
+            "B. -909.67",
+            "C. -779.12",
+            "D. -554.56",
             2
         )
         questionList.add(ques9)
         val ques10 = DataClassQuestionAnswer(
-            "What is ASTEROID? Choose the following,",
-            "A.  It's a rocky or metallic objects that orbit the Sun, primarily found in the asteroid belt.",
-            "B. It's a vast system of stars, stellar remnants, interstellar gas, dust, and dark matter.",
-            "C. It's a celestial objects that orbit stars, including our Sun, and they lack the ability to generate their own light.",
-            "D. It's a luminous celestial object consisting primarily of hydrogen and helium gas that emits light.",
+            "Find the °C=(°F−32)×5/9 where °F is -20? Choose the following correct answer",
+            "A.  -28.88",
+            "B. -23.88",
+            "C. -24.88",
+            "D. -25.88",
             1
         )
         questionList.add(ques10)
         //3
         val ques11 = DataClassQuestionAnswer(
-            "Which of the following statements is TRUE? Choose the following",
-            "A. All animals are capable of time travel and can visit any point in history. ",
-            "B. Animals communicate with each other through telepathy. ",
-            "C. It's a highly diverse group of living organisms that can be categorized in various ways",
-            "D. All animals are highly intelligent and capable of advanced reasoning.",
-            3
+            "Find the Mean of 1,2,3,4,5? Choose the following correct answer",
+            "A.  4",
+            "B. 3",
+            "C. 5",
+            "D.  2.5",
+            2
         )
         questionList.add(ques11)
         val ques12 = DataClassQuestionAnswer(
-            "What is the example of MAMMAL? Choose the following",
-            "A. Salamander",
-            "B.  Zebra",
-            "C. Alligator",
-            "D. Eagle",
+            "Find the Mean of 7,3,4,1,7,6? Choose the following correct answer",
+            "A.  1.2",
+            "B. 6.6",
+            "C. 5.3",
+            "D.  2.2",
             2
         )
         questionList.add(ques12)
         val ques13 = DataClassQuestionAnswer(
-            "What is the example of REPTILE? Choose the following",
-            "A. Salamander",
-            "B.  Zebra",
-            "C. Alligator",
-            "D. Eagle",
+            "Find the Median of 7,3,4,1,7,6? Choose the following correct answer",
+            "A.  1,2",
+            "B. 3,4",
+            "C. 4,6",
+            "D.  5,1",
             3
         )
         questionList.add(ques13)
         val ques14 = DataClassQuestionAnswer(
-            "What is the example of AMPHIBIAN? Choose the following",
-            "A. Salamander",
-            "B.  Zebra",
-            "C. Alligator",
-            "D. Eagle",
-            1
+            "Find the Median of 5,4,3,2,1? Choose the following correct answer",
+            "A.  5",
+            "B. 4",
+            "C. 3",
+            "D.  2",
+            3
         )
         questionList.add(ques14)
         val ques15 = DataClassQuestionAnswer(
-            "What is the example of BIRD? Choose the following",
-            "A. Salamander",
-            "B.  Zebra",
-            "C. Alligator",
-            "D. Eagle",
+            "Find the Mode of 7,3,4,1,7,6? Choose the following correct answer",
+            "A.  5",
+            "B. 6",
+            "C. 4",
+            "D.  7",
             4
         )
         questionList.add(ques15)
         //4
         val ques16 = DataClassQuestionAnswer(
-            "Which of the following statements is TRUE? Choose the following",
-            "A. Scientist is a person who engages in scientific research and investigation to gain a better understanding of the natural world",
-            "B. All scientists have secret labs hidden inside volcanoes, just like in movies.",
-            "C. Scientists wear white lab coats 24/7, even at home or while shopping.",
-            "D. Scientists always possess the ability to instantly invent groundbreaking technologies.",
-            4
+            "Find the Area = l x w, where l = 10 and w = 100? Choose the following correct answer",
+            "A.  500",
+            "B. 600",
+            "C. 1000",
+            "D.  1200",
+            3
         )
         questionList.add(ques16)
         val ques17 = DataClassQuestionAnswer(
-            "What is the famous discovery of ISAAC NEWTON? Choose the following",
-            "A. Telescope Observation",
-            "B. Theory of Relativity",
-            "C. Law of Universal Gravitation",
-            "D. Theory of Evolution",
+            "Find the Area = l x w , where l = 50 and w = -40? Choose the following correct answer",
+            "A.  -5000",
+            "B. -6000",
+            "C. -2000",
+            "D.  -1200",
             3
         )
         questionList.add(ques17)
         val ques18 = DataClassQuestionAnswer(
-            "What is the famous discovery of CHARLES DARWIN? Choose the following",
-            "A. Telescope Observation",
-            "B. Theory of Relativity",
-            "C. Law of Universal Gravitation",
-            "D. Theory of Evolution",
+            "Find the Area = s**2, where s = 5? Choose the following correct answer",
+            "A.  100",
+            "B. 125",
+            "C. 150",
+            "D.  25",
             4
         )
         questionList.add(ques18)
         val ques19 = DataClassQuestionAnswer(
-            "What is the famous discovery of ALBERT EINSTEIN? Choose the following",
-            "A. Telescope Observation",
-            "B. Theory of Relativity",
-            "C. Law of Universal Gravitation",
-            "D. Theory of Evolution",
-            2
+            "Find the Area = s**2, where s = -25? Choose the following correct answer",
+            "A.  625",
+            "B. 400",
+            "C. 200",
+            "D.  1000",
+            1
         )
         questionList.add(ques19)
         val ques20 = DataClassQuestionAnswer(
-            "What is the famous discovery of GALILEO GALILEI? Choose the following",
-            "A. Telescope Observation",
-            "B. Theory of Relativity",
-            "C. Law of Universal Gravitation",
-            "D. Theory of Evolution",
-            1
+            "Find the Area = 1/2 * b * h, where b = -5 and h = 5? Choose the following correct answer",
+            "A.  -10.4",
+            "B. -12.5",
+            "C. -14.3",
+            "D.  -15.22",
+            2
         )
         questionList.add(ques20)
         //5
         val ques21 = DataClassQuestionAnswer(
-            "Which of the following statements is TRUE? Choose the following",
-            "A. Matter is everything that has mass and occupies space.",
-            "B. All matter is invisible and intangible.",
-            "C. Matter can be converted into pure energy at will.",
-            "D. All matter is made of the same substance, like jelly. ",
+            "Find the E = f * d, where b = -5 and h = 5? Choose the following correct answer",
+            "A.  -10.4",
+            "B. -12.5",
+            "C. -14.3",
+            "D.  -15.22",
             1
         )
         questionList.add(ques21)
         val ques22 = DataClassQuestionAnswer(
-            "What is the example of SOLID? Choose the following",
-            "A. Crystal",
-            "B. Water",
-            "C. Hot Air Balloon",
-            "D. Blood",
+            "Find the Area = 1/2 * b * h, where b = -5 and h = 5? Choose the following correct answer",
+            "A.  -10.4",
+            "B. -12.5",
+            "C. -14.3",
+            "D.  -15.22",
             1
         )
         questionList.add(ques22)
         val ques23 = DataClassQuestionAnswer(
-            "What is the example of LIQUID? Choose the following",
-            "A. Crystal",
-            "B. Water",
-            "C. Hot Air Balloon",
-            "D. Blood",
+            "Find the Area = 1/2 * b * h, where b = -5 and h = 5? Choose the following correct answer",
+            "A.  -10.4",
+            "B. -12.5",
+            "C. -14.3",
+            "D.  -15.22",
             2
         )
         questionList.add(ques23)
         val ques24 = DataClassQuestionAnswer(
-            "What is the example of GAS? Choose the following",
-            "A. Crystal",
-            "B. Water",
-            "C. Hot Air Balloon",
-            "D. Blood",
+            "Find the Area = 1/2 * b * h, where b = -5 and h = 5? Choose the following correct answer",
+            "A.  -10.4",
+            "B. -12.5",
+            "C. -14.3",
+            "D.  -15.22",
             3
         )
         questionList.add(ques24)
         val ques25 = DataClassQuestionAnswer(
-            "What is the example of PLASMA? Choose the following",
-            "A. Crystal",
-            "B. Water",
-            "C. Hot Air Balloon",
-            "D. Blood",
+            "Find the Area = 1/2 * b * h, where b = -5 and h = 5? Choose the following correct answer",
+            "A.  -10.4",
+            "B. -12.5",
+            "C. -14.3",
+            "D.  -15.22",
             4
         )
         questionList.add(ques25)

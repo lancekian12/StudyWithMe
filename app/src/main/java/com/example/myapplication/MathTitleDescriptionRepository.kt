@@ -24,8 +24,8 @@ object MathTitleDescriptionRepository {
         val desc3 = DataClassTitleDescription(
             "Exponential Function",
             "An exponential function of x is given as: f(x) = a^x, where \"a\" is a positive constant.",
-            "For example, f(x) = 2^x represents exponential growth.",
-            "For example, f(x) = -4^x + 5 represents exponential growth",
+            "For example, f(x) = 2**x represents exponential growth.",
+            "For example, f(x) = -4**x + 5 represents exponential growth",
             R.drawable.fx5,
             R.drawable.fx6
         )
@@ -33,7 +33,7 @@ object MathTitleDescriptionRepository {
         val desc4 = DataClassTitleDescription(
             "Celsius",
             "Celsius (symbol: °C) is a temperature scale used in most of the world for measuring temperature.",
-            "To convert from Celsius to Kelvin, K=°C+273.15",
+            "To convert from Celsius to Kelvin, K=°C+273",
             "To convert from Celsius to Fahrenheit, °F=(°C×9/5)+32",
             R.drawable.celsius1,
             R.drawable.celsius2

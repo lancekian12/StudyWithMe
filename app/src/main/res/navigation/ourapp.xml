@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ourapp"
+    app:startDestination="@id/splashScreenActivity3">
+
+    <activity
+        android:id="@+id/MainActivity"
+        android:name="com.example.myapplication.MainActivity"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/Homepage"
+        android:name="com.example.myapplication.Navigation"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_navigation" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.myapplication.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.example.myapplication.RegisterActivity"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapplication.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/subjectsFragment"
+        android:name="com.example.myapplication.SubjectsFragment"
+        android:label="fragment_subjects"
+        tools:layout="@layout/fragment_subjects" />
+    <activity
+        android:id="@+id/splashScreenActivity3"
+        android:name="com.example.myapplication.SplashScreenActivity"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_splash_screen" />
+    <activity
+        android:id="@+id/noteList"
+        android:name="com.example.myapplication.NoteList"
+        android:label="activity_note_list"
+        tools:layout="@layout/activity_note_list" />
+    <activity
+        android:id="@+id/englishContent"
+        android:name="com.example.myapplication.EnglishContent"
+        android:label="activity_english_content"
+        tools:layout="@layout/activity_english_content" />
+    <activity
+        android:id="@+id/filipinoContent"
+        android:name="com.example.myapplication.FilipinoContent"
+        android:label="activity_filipino_content"
+        tools:layout="@layout/activity_filipino_content" />
+    <activity
+        android:id="@+id/historyContent"
+        android:name="com.example.myapplication.HistoryContent"
+        android:label="activity_history_content"
+        tools:layout="@layout/activity_history_content" />
+    <activity
+        android:id="@+id/mathContent"
+        android:name="com.example.myapplication.MathContent"
+        android:label="activity_math_content"
+        tools:layout="@layout/activity_math_content" />
+    <activity
+        android:id="@+id/scienceContent"
+        android:name="com.example.myapplication.ScienceContent"
+        android:label="activity_science_content"
+        tools:layout="@layout/activity_science_content" />
+</navigation>

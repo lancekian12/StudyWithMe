@@ -16,6 +16,46 @@
         android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="s">
         <activity
+            android:name=".TodoList"
+            android:exported="false" />
+        <activity
+            android:name=".Navigation"
+            android:exported="false"
+            android:theme="@style/Theme.NavigationAndBottom" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryCert"
+            android:exported="false" />
+        <activity
+            android:name=".MathCert"
+            android:exported="false" />
+        <activity
+            android:name=".ScienceCert"
+            android:exported="false" />
+        <activity
+            android:name=".FilipinoCert"
+            android:exported="false" />
+        <activity
+            android:name=".EnglishCert"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.NavigationAndBottom" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LoginSignupSWM" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LoginSignupSWM" />
+        <activity
             android:name=".NoteList"
             android:exported="false" />
         <activity
@@ -27,7 +67,7 @@
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true"
-            android:theme="@style/Theme.Design.Light.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

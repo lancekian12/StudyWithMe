@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -38,6 +40,12 @@ class MathContent : AppCompatActivity() {
 
         // Load the initial fragment (OverviewFragment)
         replaceFragment(MathOverviewFragment())
+
+        val back = findViewById<ImageView>(R.id.ivBack)
+        back.setOnClickListener {
+            val intent = Intent(this,Navigation::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun replaceFragment(fragment: Fragment) {

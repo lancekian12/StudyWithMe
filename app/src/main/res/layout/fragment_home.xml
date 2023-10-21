@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff2e2"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvHelloUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Hello, Lance Kian Flores!"
+                android:textAlignment="center"
+                android:textColor="#CC7F0D"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/ltAnimation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.132"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.533" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/ltAnimation"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="76dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/animation_studying" />
+
+            <TextView
+                android:id="@+id/textViewWELCOME"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="Welcome to Study With Me"
+                android:textAlignment="center"
+                android:textColor="#CC7F0D"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.49"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ltAnimation" />
+
+            <TextView
+                android:id="@+id/textViewSUBJECTS"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:text="Subjects"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.048"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewWELCOME" />
+
+            <TextView
+                android:id="@+id/TextViewHSJHS"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:text="High School - JHS"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSUBJECTS" />
+
+            <TextView
+                android:id="@+id/tvMoreSubjects"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:backgroundTint="#00000000"
+                android:text="More Details"
+                android:textColor="#cc7f0d"
+                app:layout_constraintBottom_toTopOf="@+id/viewFlipper"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSUBJECTS"
+                app:layout_constraintVertical_bias="0.413" />
+
+            <ViewFlipper
+                android:id="@+id/viewFlipper"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:autoStart="true"
+                android:flipInterval="2000"
+                android:inAnimation="@android:anim/slide_in_left"
+                android:outAnimation="@android:anim/slide_out_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_goneMarginTop="50dp"
+                app:layout_constraintTop_toBottomOf="@+id/TextViewHSJHS"
+                tools:layout_editor_absoluteY="424dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/illus_english" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/illus_science" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/illus_history" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/illus_math" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/illus_filipino" />
+                </androidx.cardview.widget.CardView>
+
+
+            </ViewFlipper>
+
+            <TextView
+                android:id="@+id/SocratesQoute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/shortbaby"
+                android:text=" 'Education is the kindling of a flame, not the filling of a vessel.' - Socrates"
+                android:textAlignment="center"
+                android:textColor="#402600"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewFlipper" />
+
+            <TextView
+                android:id="@+id/textViewVIDEOS"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:text="Video Learnings"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.048"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/SocratesQoute" />
+
+            <TextView
+                android:id="@+id/textViewVIDEOS2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:text="All Subjects"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.042"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewVIDEOS" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardViewVID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#000000"
+                app:cardElevation="4dp"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/textViewVIDEOS2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="WebViewLayout">
+
+                <WebView
+                    android:id="@+id/youtubeVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@android:color/transparent" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardViewVID2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#000000"
+                app:cardElevation="4dp"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/CardViewVID"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="WebViewLayout">
+
+                <WebView
+                    android:id="@+id/youtubeVideoTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@android:color/transparent" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardViewVID3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#000000"
+                app:cardElevation="4dp"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/CardViewVID2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="WebViewLayout">
+
+                <WebView
+                    android:id="@+id/youtubeVideoThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@android:color/transparent" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardViewVID4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#000000"
+                app:cardElevation="4dp"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/CardViewVID3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="WebViewLayout">
+
+                <WebView
+                    android:id="@+id/youtubeVideoFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@android:color/transparent" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardViewVID5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#000000"
+                app:cardElevation="4dp"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/CardViewVID4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="WebViewLayout">
+
+                <WebView
+                    android:id="@+id/youtubeVideoFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@android:color/transparent" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/Spacing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:layout_marginTop="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/CardViewVID5" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

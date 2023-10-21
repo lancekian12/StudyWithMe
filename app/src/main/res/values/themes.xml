@@ -1,14 +1,61 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.MyApplication" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Base.Theme.LoginSignupSWM" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
+        <item name="android:windowFullscreen">true</item>
     </style>
 
     <style name="ButtonColor">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ButtonColor2">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="backgroundTint">#fec775</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ButtonColor3">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="backgroundTint">#807F7D</item>
+        <item name="android:enabled">false</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="SubTitle">
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColorHint">@color/black</item>
+        <item name="hintTextColor">@color/black</item>
+        <item name="startIconTint">#FFA426</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+    </style>
+
+    <style name="TextInputEditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:background">@drawable/bg_text_feild</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">#000</item>
+    </style>
+
+
+    <style name="Button_Color_2">
         <item name="fontFamily">@font/montserrat</item>
         <item name="android:textColor">#A16000</item>
         <item name="android:textSize">14sp</item>
@@ -53,14 +100,42 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="profilebuttons">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="backgroundTint">#fec775</item>
+        <item name="fontFamily">@font/montserrat</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="profilebuttonsLOGOUT">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="backgroundTint">#FB6B6B</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="profilebuttonsSAVE">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="backgroundTint">#BCFF8B</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
     <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="Base.Theme.MySplashScreenExample" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.LoginSignupSWM" parent="Base.Theme.LoginSignupSWM" />
+
+    <style name="Base.Theme.NavigationAndBottom" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/primarycolor</item>
+        <item name="colorPrimaryVariant">@color/primarycolor</item>
+        <item name="android:statusBarColor">@color/primarycolor</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 
-    <style name="Theme.MySplashScreenExample" parent="Base.Theme.MySplashScreenExample" />
+    <style name="Theme.NavigationAndBottom" parent="Base.Theme.NavigationAndBottom" />
 </resources>
