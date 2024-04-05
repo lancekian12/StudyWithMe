@@ -15,9 +15,7 @@ import com.jakewharton.rxbinding2.widget.RxTextView
 @SuppressLint("CheckResult")
 class RegisterActivity : AppCompatActivity() {
 
-    companion object {
-        var etFullnameValue: String = ""
-    }
+
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var databaseHelper: DatabaseHelper
 
@@ -28,11 +26,14 @@ class RegisterActivity : AppCompatActivity() {
 
         databaseHelper = DatabaseHelper(this)
 
-        binding.btnRegister.setOnClickListener{
+        binding.btnRegister.setOnClickListener {
             val signupUsername = binding.etUsername.text.toString()
             val signupPassword = binding.etPassword.text.toString()
-            signupDataBase(signupUsername, signupPassword)
-            Log.i("Test", "Regiseter")
+            val fullname = binding.etFullname.text.toString()
+            val email = binding.etEmail.text.toString()
+
+            signupDataBase(signupUsername, signupPassword, fullname, email)
+            Log.i("Test", "Register")
         }
 
 
@@ -126,18 +127,25 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun signupDataBase(username: String, password: String){
-        val insertedRowId = databaseHelper.insertUser(username, password)
-        if (insertedRowId != -1L){
-            Toast.makeText(this, "Signup Successful", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, LoginActivity::class.java)
-            intent.putExtra("FullName",binding.etFullname.toString())
-            startActivity(intent)
-            finish()
-        } else{
-            Toast.makeText(this, "Signup Failed", Toast.LENGTH_SHORT).show()
+    private fun signupDataBase(username: String, password: String, fullname: String, email: String) {
+        val databaseHelper = DatabaseHelper(this)
+
+        if (databaseHelper.isUsernameTaken(username)) {
+            Toast.makeText(this, "Username already exists.", Toast.LENGTH_SHORT).show()
+        } else {
+            val insertedRowId = databaseHelper.insertUser(username, password, fullname, email)
+            if (insertedRowId != -1L) {
+                Toast.makeText(this, "Signup Successful", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(this, "Signup failed. Please try again.", Toast.LENGTH_SHORT).show()
+            }
         }
     }
+
+
 
     private fun showNameExistAlert(isNotValid: Boolean) {
         binding.etFullname.error = if(isNotValid) "Name cannot be empty!" else null

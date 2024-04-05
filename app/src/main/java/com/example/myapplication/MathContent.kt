@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -43,7 +44,7 @@ class MathContent : AppCompatActivity() {
 
         val back = findViewById<ImageView>(R.id.ivBack)
         back.setOnClickListener {
-            val intent = Intent(this,Navigation::class.java)
+            val intent = Intent(this@MathContent, Navigation::class.java)
             startActivity(intent)
         }
     }

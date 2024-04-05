@@ -32,7 +32,7 @@ class ChapterAdapterFilipino : RecyclerView.Adapter<ChapterAdapterFilipino.Chapt
         Chapter("Lesson 3", "Mga Uri ng Panitikan", listOf("Uri ng Panitikan", "Video Lesson: Uri ng Panitikan", "Test Quiz 3")),
         Chapter("Lesson 4", "Mga Uri ng Karunungang Bayan", listOf("Uri ng Karunungang Bayan", "Video Lesson: Uri ng Karunungang Bayan", "Test Quiz 4")),
         Chapter("Lesson 5", "Mga Uri ng Aspetong Pandiwa", listOf("Uri ng Aspetong Pandiwa", "Video Lesson: Uri ng Aspetong Pandiwa", "Test Quiz 5")),
-        Chapter("Certificate Completion", "Final Quiz", listOf())
+        Chapter("Certificate Completion", "Final Quiz", listOf("Final Quiz", "Filipino Certificate"))
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChapterViewHolder {

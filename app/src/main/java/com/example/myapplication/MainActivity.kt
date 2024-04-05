@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener {
-            startActivity(Intent(this, Navigation::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             Log.i("Test", "Login")
         }
         binding.btnRegister.setOnClickListener {

@@ -35,7 +35,7 @@ class ChapterAdapterScience : RecyclerView.Adapter<ChapterAdapterScience.Chapter
         Chapter("Lesson 3", "Animals", listOf("Different Types of Animals", "Video Lesson: Animals", "Test Quiz 3")),
         Chapter("Lesson 4", "Famous Scientist", listOf("Famous Scientists", "Video Lesson: Famous Scientists", "Test Quiz 4")),
         Chapter("Lesson 5", "States of Matter", listOf("Different Types of Matter ", "Video Lesson: Verb", "Test Quiz 5")),
-        Chapter("Certificate Completion", "Final Quiz", listOf())
+        Chapter("Certificate Completion", "Final Quiz", listOf("Final Quiz", "Science Certificate"))
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChapterViewHolder {

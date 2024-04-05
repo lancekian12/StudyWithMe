@@ -35,7 +35,7 @@ class ChapterAdapterEnglish : RecyclerView.Adapter<ChapterAdapterEnglish.Chapter
         Chapter("Lesson 3", "Literature", listOf("Different Types of Literature", "Video Lesson: Literature", "Test Quiz 3")),
         Chapter("Lesson 4", "Folk Lore", listOf("Different Types of Folk Lore", "Video Lesson: Folk Lore", "Test Quiz 4")),
         Chapter("Lesson 5", "Verb", listOf("Different Types of Verb ", "Video Lesson: Verb", "Test Quiz 5")),
-        Chapter("Certificate Completion", "Final Quiz", listOf())
+        Chapter("Certificate Completion", "Final Quiz", listOf("Final Quiz", "English Certificate"))
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChapterViewHolder {

@@ -7,7 +7,7 @@
     android:background="@color/primary_color"
     android:layout_gravity="center"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".ProfileActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
@@ -24,12 +24,12 @@
             android:id="@+id/image_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#D5D5D5"
-            android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/circular"
-            app:srcCompat="@drawable/baseline_account_circle_25"
+            app:srcCompat="@drawable/baseline_account_circle_24"
+            android:background="#D5D5D5"
             app:strokeColor="#FDAD34"
-            app:strokeWidth="5dp" />
+            app:strokeWidth="5dp"
+            android:scaleType="centerCrop" />
     </androidx.cardview.widget.CardView>
 
     <Button
@@ -47,17 +47,15 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <ImageView
-        android:id="@+id/backbutton1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:id="@+id/ivBackButton"
+        android:layout_width="46dp"
+        android:layout_height="38dp"
         android:layout_marginTop="16dp"
-        android:onClick="onBackButtonClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_arrow_back_25"
-        tools:ignore="OnClick" />
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
 
 
     <androidx.cardview.widget.CardView
@@ -73,7 +71,7 @@
         app:layout_constraintVertical_bias="0.558">
 
         <TextView
-            android:id="@+id/tvName"
+            android:id="@+id/profilename"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
@@ -95,7 +93,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/tvUserName"
+        android:id="@+id/text_view2"
         android:layout_width="350dp"
         android:layout_height="50dp"
         app:cardCornerRadius="10dp"
@@ -107,7 +105,7 @@
         app:layout_constraintVertical_bias="0.657"> <!-- Half of the width/height for a circle -->
 
         <TextView
-            android:id="@+id/tvUsername"
+            android:id="@+id/profileusername"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat"
@@ -120,7 +118,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvName"
+            app:layout_constraintTop_toBottomOf="@+id/profilename"
             app:layout_constraintVertical_bias="0.13" />
 
 
@@ -140,7 +138,7 @@
         app:layout_constraintVertical_bias="0.762"> <!-- Half of the width/height for a circle -->
 
         <TextView
-            android:id="@+id/tvEmaill"
+            android:id="@+id/profileemail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat"
@@ -153,7 +151,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvUsername"
+            app:layout_constraintTop_toBottomOf="@+id/profileusername"
             app:layout_constraintVertical_bias="0.153" />
 
 
@@ -199,7 +197,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Username"
-        app:layout_constraintBottom_toTopOf="@+id/tvUserName"
+        app:layout_constraintBottom_toTopOf="@+id/text_view2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

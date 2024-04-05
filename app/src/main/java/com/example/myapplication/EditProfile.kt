@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.animation.AnimationUtils
 import android.widget.Toast
 import android.util.Patterns
@@ -25,13 +26,14 @@ class EditProfile : AppCompatActivity() {
 
 
         binding.savebtn.setOnClickListener {
-
             val name = binding.profilenameedit.text.toString()
-            val username = binding.profileusernamedit.text.toString()
+            val oldUsername = binding.profileusernamedit.text.toString()
+            val newUsername = binding.newUsernameEditText.text.toString()
             val email = binding.profileemailedit.text.toString()
 
+            // Check if the username is empty or invalid
             val isNameEmpty = name.isEmpty()
-            val isUsernameValid = isUsernameValid(username)
+            val isUsernameValid = isUsernameValid(newUsername)
             val isEmailValid = isEmailValid(email)
 
             showNameEmptyAlert(isNameEmpty)
@@ -39,14 +41,27 @@ class EditProfile : AppCompatActivity() {
             showEmailFormatAlert(isEmailValid)
 
             if (!isNameEmpty && isUsernameValid && isEmailValid) {
-                val intent = Intent()
-                intent.putExtra("name", name)
-                intent.putExtra("username", username)
-                intent.putExtra("email", email)
-                setResult(RESULT_OK, intent)
-                finish()
+                val databaseHelper = DatabaseHelper(this)
+                val usernameUpdated = databaseHelper.updateUsername(oldUsername, newUsername)
+
+                if (usernameUpdated) {
+                    Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
+                    val intent = Intent()
+                    intent.putExtra("EditName",name)
+                    Log.i("Name","$name ito ay una")
+                    intent.putExtra("name", name)
+                    intent.putExtra("username", newUsername)
+                    intent.putExtra("email", email)
+                    setResult(RESULT_OK, intent)
+                    finish()
+                } else {
+                    Toast.makeText(this, "Failed to update profile. The new username might be already taken.", Toast.LENGTH_SHORT).show()
+                }
             }
         }
+
+
+
 
     }
     private fun showNameEmptyAlert(isEmpty: Boolean) {

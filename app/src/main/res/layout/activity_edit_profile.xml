@@ -7,7 +7,7 @@
     android:background="@color/primary_color"
     android:layout_gravity="center"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".EditProfile">
 
     <ImageView
         android:id="@+id/imageView"
@@ -35,25 +35,27 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0" />
 
-
     <ImageView
         android:id="@+id/backbutton2"
-        android:layout_width="48dp"
-        android:layout_height="65dp"
+        android:layout_width="57dp"
+        android:layout_height="64dp"
         android:layout_marginTop="16dp"
-        android:onClick="onBackButtonClick"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_arrow_back_25" />
+        app:srcCompat="@drawable/baseline_arrow_back_24"
+        android:onClick="onBackButtonClick"
+        tools:ignore="OnClick" />
+
 
     <EditText
         android:id="@+id/profilenameedit"
         style="@style/TextInputEditText"
-        android:layout_width="285dp"
+        android:layout_width="320dp"
         android:layout_height="44dp"
         android:hint="Your Name"
+        android:inputType="text"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textAlignment="center"
@@ -67,34 +69,56 @@
     <EditText
         android:id="@+id/profileusernamedit"
         style="@style/TextInputEditText"
-        android:layout_width="285dp"
+        android:layout_width="320dp"
         android:layout_height="44dp"
-        android:hint="Your Username"
+        android:background="@drawable/edit_text_border"
+        android:hint="Your old Username"
+        android:inputType="text"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:textAlignment="center"
-        android:background="@drawable/edit_text_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.675" />
+        app:layout_constraintVertical_bias="0.662" />
+
+    <EditText
+        android:id="@+id/newUsernameEditText"
+        style="@style/TextInputEditText"
+        android:layout_width="320dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_text_border"
+        android:hint="Your new Username"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748" />
 
     <EditText
         android:id="@+id/profileemailedit"
         style="@style/TextInputEditText"
-        android:layout_width="285dp"
+        android:layout_width="320dp"
         android:layout_height="44dp"
-        android:hint="Your Email"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        android:textColorHint="@color/black"
         android:background="@drawable/edit_text_border"
+        android:hint="Your Email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781" />
+        app:layout_constraintVertical_bias="0.832" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/savebtn"
@@ -107,7 +131,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
+        app:layout_constraintVertical_bias="0.951" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

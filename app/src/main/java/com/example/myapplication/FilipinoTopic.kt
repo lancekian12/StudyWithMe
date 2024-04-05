@@ -79,7 +79,7 @@ class FilipinoTopic : AppCompatActivity() {
         originalButtonText = button_text.text
         if (total == 0) {
             displayTitleDescription(currentPosition)
-        } else if (getTotal >= 15) {
+        } else if (getTotal >= 17) {
             topic.text = "Filipino: Uri ng Aspetong Pandiwa"
             theTitle.text = "URI NG ASPETONG PANDIWA"
             displayTitleDescription(startingPosition4)
@@ -123,7 +123,7 @@ class FilipinoTopic : AppCompatActivity() {
                         val intent = Intent(this, FilipinoTopicQuiz::class.java)
                         startActivity(intent)
                     }
-                } else if(getTotal >= 15){
+                } else if(getTotal >= 17){
                     if (startingPosition4 < endingPosition4) {
                         topic.text = "Filipino: Uri ng Aspetong Pandiwa"
                         theTitle.text = "URI NG ASPETONG PANDIWA"

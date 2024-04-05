@@ -130,7 +130,7 @@ class FilipinoTopicQuiz : AppCompatActivity() {
         originalButtonText = button_text.text
         if(total ==0 ) {
             loadQuestion(currentQuestionIndex) // Load the first question
-        }else if(total >= 15){
+        }else if(total >= 17){
             topic.text = "Filipino: Uri ng Aspetong Pandiwa"
             loadQuestion(startingPosition4)
         }
@@ -244,7 +244,7 @@ class FilipinoTopicQuiz : AppCompatActivity() {
                         // Set the "CONTINUE" text and make it visible
                         button_text.text = "CHECK"
                         button_text.visibility = View.VISIBLE
-                    } else if(total >= 15){
+                    } else if(total >= 17){
                         if (startingPosition4 < endingPosition4) {
                             topic.text = "Filipino: Uri ng Aspetong Pandiwa"
                             startingPosition4++

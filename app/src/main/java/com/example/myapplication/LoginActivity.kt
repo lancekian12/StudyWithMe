@@ -87,14 +87,19 @@ class LoginActivity : AppCompatActivity() {
         val userExists = databaseHelper.readUser(username, password)
         if (userExists) {
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+            val valid = "valid"
             val intent = Intent(this, Navigation::class.java)
-            intent.putExtra("username",binding.etEmail.text.toString())
+            // Pass the 'username' to ProfileActivity using an intent extra
+            intent.putExtra("username", username)
+            intent.putExtra("valid", valid.toString())
             startActivity(intent)
             finish()
         } else {
             Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
         }
     }
+
+
 
     private fun showTextMinimalAlert(isNotValid: Boolean, text: String) {
         if (text == "Email/Username")

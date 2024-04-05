@@ -3,16 +3,18 @@ package com.example.myapplication
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.webkit.WebView
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.fragment.app.FragmentTransaction
 
 
 class HomeFragment : Fragment() {
-    @SuppressLint("SetJavaScriptEnabled", "MissingInflatedId")
+    @SuppressLint("SetJavaScriptEnabled", "MissingInflatedId", "SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,12 +26,19 @@ class HomeFragment : Fragment() {
         val webView4 = view.findViewById<WebView>(R.id.youtubeVideoFour)
         val webView5 = view.findViewById<WebView>(R.id.youtubeVideoFive)
         val moreDetails = view.findViewById<TextView>(R.id.tvMoreSubjects)
+        val helloUser = view?.findViewById<TextView>(R.id.tvHelloUser)
+
+        helloUser?.text = "Lance Kian Flores!"
+
+        val message = "SUBJECTS"
 
         moreDetails.setOnClickListener {
-            val intent = Intent(requireContext(), SubjectsFragment::class.java)
+            val intent = Intent(requireContext(), Navigation::class.java)
+            intent.putExtra("Message",message.toString())
             startActivity(intent)
         }
         // VIDEO ONE
+
 
         val videoUrl = "https://www.youtube.com/watch?v=URUJD5NEXC8"
         val youtubeVideoId = extractVideoId(videoUrl)
@@ -71,6 +80,7 @@ class HomeFragment : Fragment() {
 
         return view
     }
+
 
     private fun extractVideoId(videoUrl: String): String {
         // Extract the YouTube video ID from the URL

@@ -78,7 +78,7 @@ class ScienceTopic : AppCompatActivity() {
         originalButtonText = button_text.text
         if (total == 0) {
             displayTitleDescription(currentPosition)
-        } else if (getTotal >= 15) {
+        } else if (getTotal >= 17) {
             topic.text = "Science: States of Matter"
             theTitle.text = "STATES OF MATTER"
             displayTitleDescription(startingPosition4)
@@ -122,7 +122,7 @@ class ScienceTopic : AppCompatActivity() {
                         val intent = Intent(this, ScienceTopicQuiz::class.java)
                         startActivity(intent)
                     }
-                } else if(getTotal >= 15){
+                } else if(getTotal >= 17){
                     if (startingPosition4 < endingPosition4) {
                         topic.text = "Science: States of Matter"
                         theTitle.text = "STATES OF MATTER"

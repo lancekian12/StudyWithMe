@@ -37,7 +37,7 @@ class ChapterAdapterMath : RecyclerView.Adapter<ChapterAdapterMath.ChapterViewHo
         Chapter("Lesson 3", "Mean, Median, Mode", listOf("Mean, Median, Mode", "Video Lesson: Mean, Median, Mode", "Test Quiz 3")),
         Chapter("Lesson 4", "Area", listOf("Area", "Video Lesson: Area", "Test Quiz 4")),
         Chapter("Lesson 5", "Energy", listOf("Energy", "Video Lesson: Energy", "Test Quiz 5")),
-        Chapter("Certificate Completion", "Final Quiz", listOf())
+        Chapter("Certificate Completion", "Final Quiz", listOf("Final Quiz", "Math Certificate"))
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChapterViewHolder {

@@ -22,9 +22,14 @@ class ActivityResultEnglish : AppCompatActivity() {
         val total = totalQuiz + extra
         Log.i("Total", "$total")
         next.setOnClickListener{
-            val intent = Intent(this,EnglishTopic::class.java)
-            intent.putExtra("Score", total)
-            startActivity(intent)
+            if (total >=18){
+                val intent = Intent(this,EnglishTopicQuiz::class.java)
+                startActivity(intent)
+            }else{
+                val intent = Intent(this,EnglishTopic::class.java)
+                intent.putExtra("Score", total)
+                startActivity(intent)
+            }
         }
     }
 }

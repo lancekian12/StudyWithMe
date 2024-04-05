@@ -7,25 +7,27 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 
-class DatabaseHelper(private val context: Context):
+open class DatabaseHelper(private val context: Context):
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
-
-
     companion object{
         private const val DATABASE_NAME = "UserDatabase.db"
-        private const val DATABASE_VERSION = 1
-        private const val TABLE_NAME = "data"
+        private const val DATABASE_VERSION = 2
+        const val TABLE_NAME = "data"
         private const val COLUMN_ID = "id"
-        private const val COLUMN_USERNAME = "username"
+        const val COLUMN_USERNAME = "username"
         private const val COLUMN_PASSWORD = "password"
+        const val COLUMN_FULLNAME = "fullname"
+        const val COLUMN_EMAIL = "email"
 
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
         val createTableQuery = ("CREATE TABLE $TABLE_NAME (" +
                 "$COLUMN_ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "$COLUMN_USERNAME TEXT, " +
-                "$COLUMN_PASSWORD TEXT)")
+                "$COLUMN_USERNAME TEXT, " + // Removed PRIMARY KEY constraint
+                "$COLUMN_PASSWORD TEXT, " +
+                "$COLUMN_FULLNAME TEXT, " + // Added fullname column
+                "$COLUMN_EMAIL TEXT)") // Added email column
         db?.execSQL(createTableQuery)
         Log.i("Test", "Database")
     }
@@ -36,13 +38,20 @@ class DatabaseHelper(private val context: Context):
         onCreate(db)
     }
 
-    fun insertUser(username: String, password: String): Long {
+    fun insertUser(username: String, password: String, fullname: String, email: String): Long {
         val values = ContentValues().apply {
             put(COLUMN_USERNAME, username)
             put(COLUMN_PASSWORD, password)
+            put(COLUMN_FULLNAME, fullname)
+            put(COLUMN_EMAIL, email)
         }
         val db = writableDatabase
-        return db.insert(TABLE_NAME, null, values)
+        return try {
+            db.insertWithOnConflict(TABLE_NAME, null, values, SQLiteDatabase.CONFLICT_IGNORE)
+        } catch (e: Exception) {
+            Log.e("DatabaseHelper", "Error inserting user: ${e.message}")
+            -1
+        }
     }
 
     fun readUser(username: String, password: String): Boolean {
@@ -55,19 +64,47 @@ class DatabaseHelper(private val context: Context):
         cursor.close()
         return userExists
     }
-    @SuppressLint("Range")
-    fun getUserId(username: String): Int {
+    fun isUsernameTaken(username: String): Boolean {
         val db = readableDatabase
-        val selection = "$COLUMN_USERNAME = ?"
-        val selectionArgs = arrayOf(username)
-        val cursor = db.query(TABLE_NAME, arrayOf(COLUMN_ID), selection, selectionArgs, null, null, null)
-
-        var userId = -1 // Initialize with an invalid value
-        if (cursor.moveToFirst()) {
-            userId = cursor.getInt(cursor.getColumnIndex(COLUMN_ID))
-        }
+        val query = "SELECT $COLUMN_ID FROM $TABLE_NAME WHERE $COLUMN_USERNAME = ?"
+        val cursor = db.rawQuery(query, arrayOf(username))
+        val userExists = cursor.count > 0
         cursor.close()
+        return userExists
+    }
+    @SuppressLint("Range")
+    fun updateUsername(oldUsername: String, newUsername: String): Boolean {
+        val db = writableDatabase
 
-        return userId
+        // Check if the new username is already taken
+        if (isUsernameTaken(newUsername)) {
+            return false // Username is already taken
+        }
+
+        // Get the user's existing data
+        val selectQuery = "SELECT $COLUMN_FULLNAME, $COLUMN_EMAIL FROM $TABLE_NAME WHERE $COLUMN_USERNAME = ?"
+        val cursor = db.rawQuery(selectQuery, arrayOf(oldUsername))
+
+        if (cursor.moveToFirst()) {
+            val name = cursor.getString(cursor.getColumnIndex(COLUMN_FULLNAME))
+            val email = cursor.getString(cursor.getColumnIndex(COLUMN_EMAIL))
+
+            // Create a new record with the updated username
+            val values = ContentValues().apply {
+                put(COLUMN_USERNAME, newUsername)
+                put(COLUMN_FULLNAME, name)
+                put(COLUMN_EMAIL, email)
+            }
+
+            val newRowId = db.insert(TABLE_NAME, null, values)
+
+            // Delete the old record
+            db.delete(TABLE_NAME, "$COLUMN_USERNAME = ?", arrayOf(oldUsername))
+
+            return newRowId != -1L
+        }
+
+        cursor.close()
+        return false
     }
 }

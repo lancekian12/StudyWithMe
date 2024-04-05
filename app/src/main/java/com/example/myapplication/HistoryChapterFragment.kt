@@ -35,7 +35,7 @@ class ChapterAdapterHistory : RecyclerView.Adapter<ChapterAdapterHistory.Chapter
         Chapter("Lesson 3", "EDSA Revolution", listOf("EDSA Revolution", "Video Lesson: EDSA Revolution", "Test Quiz 3")),
         Chapter("Lesson 4", "American Colonial Period", listOf("American Colonial Period", "Video Lesson: American Colonial Period", "Test Quiz 4")),
         Chapter("Lesson 5", "Philippine Geography", listOf("Philippine Geography", "Video Lesson: Philippine Geography", "Test Quiz 5")),
-        Chapter("Certificate Completion", "Final Quiz", listOf())
+        Chapter("Certificate Completion", "Final Quiz", listOf("Final Quiz", "History Certificate"))
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChapterViewHolder {

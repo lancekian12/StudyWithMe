@@ -133,7 +133,7 @@
                 android:background="@drawable/continue_button_background"
                 android:text="Start Lesson"
                 app:layout_constraintEnd_toEndOf="@+id/tvLearned"
-                app:layout_constraintHorizontal_bias="0.19"
+                app:layout_constraintHorizontal_bias="0.617"
                 app:layout_constraintStart_toStartOf="@+id/textView"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
 

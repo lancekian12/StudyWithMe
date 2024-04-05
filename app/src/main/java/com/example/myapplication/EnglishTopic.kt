@@ -78,7 +78,7 @@ class EnglishTopic : AppCompatActivity() {
         originalButtonText = button_text.text
         if (total == 0) {
             displayTitleDescription(currentPosition)
-        } else if (getTotal >= 15) {
+        } else if (getTotal >= 17) {
             topic.text = "English: 4 Types of Sentences"
             theTitle.text = "4 TYPES OF SENTENCES"
             displayTitleDescription(startingPosition4)
@@ -122,7 +122,7 @@ class EnglishTopic : AppCompatActivity() {
                         val intent = Intent(this, EnglishTopicQuiz::class.java)
                         startActivity(intent)
                     }
-                } else if(getTotal >= 15){
+                } else if(getTotal >= 17){
                     if (startingPosition4 < endingPosition4) {
                         topic.text = "English: Tense of Verbs"
                         theTitle.text = "TENSE OF VERBS"

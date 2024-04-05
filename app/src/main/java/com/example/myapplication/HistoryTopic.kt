@@ -78,7 +78,7 @@ class HistoryTopic : AppCompatActivity() {
         originalButtonText = button_text.text
         if (total == 0) {
             displayTitleDescription(currentPosition)
-        } else if (getTotal >= 15) {
+        } else if (getTotal >= 17) {
             topic.text = "History: Geography of Philippines"
             theTitle.text = "PHILIPPINES"
             displayTitleDescription(startingPosition4)
@@ -122,7 +122,7 @@ class HistoryTopic : AppCompatActivity() {
                         val intent = Intent(this, HistoryTopicQuiz::class.java)
                         startActivity(intent)
                     }
-                } else if(getTotal >= 15){
+                } else if(getTotal >= 17){
                     if (startingPosition4 < endingPosition4) {
                         topic.text = "History: Geography of Philippines"
                         theTitle.text = "PHILIPPINES"

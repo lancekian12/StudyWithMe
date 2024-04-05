@@ -128,7 +128,10 @@ class EnglishTopicQuiz : AppCompatActivity() {
         originalButtonText = button_text.text
         if(total ==0 ) {
             loadQuestion(currentQuestionIndex) // Load the first question
-        }else if(total >= 15){
+        }else if(total >= 20){
+            topic.text = "English: Final Quiz"
+            loadQuestion(currentQuestionIndex)
+        }else if(total >= 17){
             topic.text = "English: Tense of Verbs"
             loadQuestion(startingPosition4)
         }
@@ -243,7 +246,38 @@ class EnglishTopicQuiz : AppCompatActivity() {
                         // Set the "CONTINUE" text and make it visible
                         button_text.text = "CHECK"
                         button_text.visibility = View.VISIBLE
-                    } else if(total >= 15){
+                    } else if(total >= 22){
+                        if (currentQuestionIndex < endingPosition4) {
+                            topic.text = "English: Final Quiz"
+                            currentQuestionIndex++
+                            loadQuestion(currentQuestionIndex)
+                        } else {
+                            // No more questions, check the score and decide which activity to launch
+                            if (numberOfCorrects >= 18) {
+                                val intent = Intent(this, ActivityResultEnglish::class.java)
+                                intent.putExtra("totalQuiz", total)
+                                intent.putExtra("Correct", numberOfCorrects)
+                                Log.i("Total", "$total")
+                                startActivity(intent)
+                            } else {
+                                val intent = Intent(this, TryAgain::class.java)
+                                intent.putExtra("Correct", numberOfCorrects)
+                                startActivity(intent)
+                            }
+                        }
+                        val remainingQuestions = numberOfQuestion.text.toString().toInt()
+                        if (remainingQuestions > 0) {
+                            numberOfQuestion.text = (remainingQuestions - 1).toString()
+                        }
+                        // Reset ivA, ivB, ivC, and ivD to their original drawables
+                        ivA.setImageDrawable(originalDrawableA)
+                        ivB.setImageDrawable(originalDrawableB)
+                        ivC.setImageDrawable(originalDrawableC)
+                        ivD.setImageDrawable(originalDrawableD)
+                        // Set the "CONTINUE" text and make it visible
+                        button_text.text = "CHECK"
+                        button_text.visibility = View.VISIBLE
+                    } else if(total >= 17){
                         if (startingPosition4 < endingPosition4) {
                             topic.text = "English: Tense of Verbs"
                             startingPosition4++
@@ -374,7 +408,7 @@ class EnglishTopicQuiz : AppCompatActivity() {
                     var currentQuestion = questionList[currentQuestionIndex]
                     if(total == 0){
                         currentQuestion = questionList[currentQuestionIndex]
-                    }else if(total >= 15){
+                    }else if(total >= 17){
                         currentQuestion = questionList[startingPosition4]
                     }else if(total >= 11){
                         currentQuestion = questionList[startingPosition3]
